@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous" defer></script>
+    <title>PomodoroStar</title>
+</head>
+<body>
+    <header>
+        <ul class="cabeçalho">
+            <li class="item">
+                <h1 class="titulo">Pomodoro ⭐</h1>
+            </li>
+            <li class="item"> <!--Botão darkMode-->
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </li>
+
+            
+        </ul>
+    </header>
+    <main> <!--Contador Pomodoro-->
+        <div class="card">
+            <div class="card-header">
+                
+                <div class="card-header-buttons">
+
+                    <button id="buttonTypePomodoro"
+                            class="active" 
+                            onclick="setPomodoroType(TIMER_TYPE_POMODORO);">
+                            Pomodoro
+                    </button>
+
+                    <button id="buttonTypeShortBreak"
+                            onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">
+                        Short Break
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="card-body">
+
+                <div id="circularProgressBar" class="progress-bar">
+                    <div class="progress-bar-inner">
+                        <h2 class="progress-value">25:00</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <button class="btn-sucess" onclick="startTimer();">Start</button>
+                <button class="btn-danger" onclick="stopTimer();">Stop</button>
+                <button onclick="resetTimer();">Reset</button>
+
+            </div>
+
+        </div>
+
+    </div>
+        </div>
+    </main>
+</body>
+</html>
